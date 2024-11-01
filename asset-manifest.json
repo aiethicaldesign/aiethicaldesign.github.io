@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/aiethicaldesign.github.io/static/css/main.e67e830f.css",
+    "main.js": "/aiethicaldesign.github.io/static/js/main.cbc60744.js",
+    "static/media/Montserrat-Regular.ttf": "/aiethicaldesign.github.io/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/logo.PNG": "/aiethicaldesign.github.io/static/media/logo.d4b7fca1c5c6afdb1b47.PNG",
+    "static/media/mission.PNG": "/aiethicaldesign.github.io/static/media/mission.a0df3c3c5351acf3a396.PNG",
+    "static/media/Agustina.woff": "/aiethicaldesign.github.io/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/koala.png": "/aiethicaldesign.github.io/static/media/koala.bec868b5695bb6ca4bf1.png",
+    "static/media/youtubeLogo.jpg": "/aiethicaldesign.github.io/static/media/youtubeLogo.4382436aa9c75858c324.jpg",
+    "index.html": "/aiethicaldesign.github.io/index.html",
+    "static/media/talksCardBack.svg": "/aiethicaldesign.github.io/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.e67e830f.css.map": "/aiethicaldesign.github.io/static/css/main.e67e830f.css.map",
+    "main.cbc60744.js.map": "/aiethicaldesign.github.io/static/js/main.cbc60744.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e67e830f.css",
+    "static/js/main.cbc60744.js"
+  ]
+}
