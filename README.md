@@ -1,0 +1,4 @@
+# ethical-design
+
+npm install
+
