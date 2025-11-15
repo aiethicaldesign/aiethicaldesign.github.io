@@ -30,16 +30,16 @@ export function OrganizationIntro() {
               <div className="text-lg">{'Research Themes'}</div>
             </div>
             <div className="bg-muted p-6 rounded-xl">
-              <div className="text-4xl font-bold mb-2">{'50+'}</div>
-              <div className="text-lg">{'Global Partners'}</div>
-            </div>
-            <div className="bg-muted p-6 rounded-xl">
-              <div className="text-4xl font-bold mb-2">{'100+'}</div>
-              <div className="text-lg">{'Publications'}</div>
+              <div className="text-4xl font-bold mb-2">{'10+(?)'}</div>
+              <div className="text-lg">{'Active Projects'}</div>
             </div>
             <div className="bg-muted p-6 rounded-xl">
               <div className="text-4xl font-bold mb-2">{'20+'}</div>
-              <div className="text-lg">{'Active Projects'}</div>
+              <div className="text-lg">{'Publications'}</div>
+            </div>
+            <div className="bg-muted p-6 rounded-xl">
+              <div className="text-4xl font-bold mb-2">{'2019'}</div>
+              <div className="text-lg">{'Since'}</div>
             </div>
           </div>
         </div>

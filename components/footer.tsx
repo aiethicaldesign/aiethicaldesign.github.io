@@ -27,7 +27,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-secondary">{'Design Principles'}</a></li>
               <li><a href="#" className="hover:text-secondary">{'Case Studies'}</a></li>
-              <li><a href="#" className="hover:text-secondary">{'Publications'}</a></li>
+              <li><a href="https://oxfordccai.org/publication/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">{'Publications'}</a></li>
             </ul>
           </div>
           
@@ -35,13 +35,18 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{'Partners'}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://oxfordccai.org/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
-                  {'Oxford CCAI'} <ExternalLink size={14} />
+                <a href="https://5rightsfoundation.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
+                  {'5Rights Foundation'} <ExternalLink size={14} />
                 </a>
               </li>
               <li>
-                <a href="https://5rightsframework.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
-                  {'5Rights Foundation'} <ExternalLink size={14} />
+                <a href="https://education.lego.com/en-gb/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
+                  {'LEGO Education'} <ExternalLink size={14} />
+                </a>
+              </li>
+              <li>
+                <a href="https://famstudio.co/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
+                  {'FAM Studio'} <ExternalLink size={14} />
                 </a>
               </li>
             </ul>

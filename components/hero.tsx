@@ -43,11 +43,13 @@ export function Hero() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl max-w-xs border-2">
-              <p className="text-lg font-semibold text-balance">
-                {'"AI should work for children, not manipulate them"'}
+            <div className="absolute -bottom-4 -left-3 bg-card p-5 rounded-xl shadow-xl max-w-md border-2">
+              <p className="text-lg font-semibold text-balance" style={{ color: '#c5e5dd' }}>
+                <Link href="https://www.nature.com/articles/s41586-024-07270-x" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {'"Children\'s distinct rights and needs demand far more than general AI principles. They require a truly child-centred approach."'}
+                </Link>
               </p>
-              <p className="text-sm mt-2 text-muted-foreground">
+              <p className="text-sm mt-2" style={{ color: '#c5e5dd' }}>
                 {'Dr. Jun Zhao, Principal Investigator'}
               </p>
             </div>
