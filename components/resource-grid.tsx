@@ -1,9 +1,22 @@
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { FileText, BookOpen, Video, Download, Play } from 'lucide-react'
-import { title } from 'process'
+import type { LucideIcon } from 'lucide-react'
 
-const resources = [
+type ResourceItem = {
+  title: string
+  type: string
+  href?: string
+  external?: boolean
+}
+
+type ResourceSection = {
+  category: string
+  icon: LucideIcon
+  items: ResourceItem[]
+}
+
+const resources: ResourceSection[] = [
   {
     category: 'Design Principles',
     icon: BookOpen,
@@ -44,7 +57,7 @@ const resources = [
     icon: Download,
     items: [
       { title: 'Design for Agency Curriculum Package', type: 'ZIP' },
-      { title: 'Workshop Facilitation Material', type: 'PDF', href: 'public/resources/design_for_agency_workshop.pdf' }
+      { title: 'Workshop Facilitation Material', type: 'PDF', href: '/resources/design_for_agency_workshop.pdf' }
     ]
   }
 ]
