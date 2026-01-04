@@ -1,42 +1,50 @@
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, BookOpen, Video, Download } from 'lucide-react'
+import { FileText, BookOpen, Video, Download, Play } from 'lucide-react'
+import { title } from 'process'
 
 const resources = [
   {
     category: 'Design Principles',
     icon: BookOpen,
     items: [
-      { title: 'Agency and Growth Framework', type: 'PDF' },
-      { title: 'Fairness and Inclusion Guidelines', type: 'PDF' },
-      { title: 'Transparency and Accountability Toolkit', type: 'PDF' }
+      { title: 'AI Ethics Principles for Children', type: 'Image', href: '/resources/ai_ethics_principles_for_children.webp' },
+      { title: 'Framework for Designing Children\'s Digital Autonomy', type: 'Image', href: '/resources/framework_12_ways_to_empower_children_digital_autonomy_design.pdf' }
     ]
   },
   {
     category: 'Research Publications',
     icon: FileText,
     items: [
-      { title: 'YouTube Video Recommendations Study', type: 'Paper' },
-      { title: 'TikTok Data Autonomy Research', type: 'Paper' },
-      { title: 'Digital Parenting Opportunities', type: 'Paper' }
+      { title: 'Challenges and Opportunities in Translating Ethical AI Principles into Practice for Children', type: 'Paper', href: '/resources/wang2024challenges.pdf'},
+      { title: '12 Ways to Empower: Designing for Children\'s Digital Autonomy', type: 'Paper', href: '/resources/wang2023twelve.pdf'},
+      { title: 'Co-designing with Children to Cope with Datafication Online', type: 'Paper', href: '/resources/wang2023treat.pdf' },
+      { title: 'CHAITok: A Proof-of-Concept System Supporting Children\'s Sense of Data Autonomy on Social Media', type: 'Paper', href: '/resources/wang2024chaitok.pdf' }
     ]
   },
   {
     category: 'Case Studies',
     icon: Video,
     items: [
-      { title: 'Implementing RLS in Ed-Tech', type: 'Video' },
-      { title: 'Agency by Design Workshop', type: 'Video' },
-      { title: 'Policy Maker Roundtable', type: 'Recording' }
+      {
+        title: 'Treat Me as Your Friend, Not A Number in Your Database',
+        type: 'Video',
+        href: 'https://www.youtube.com/watch?v=FYbh7luZ9rU',
+        external: true
+      },
+      { title: 'CHAITok', 
+        type: 'Video', 
+        href: 'https://www.youtube.com/watch?v=vkroMQxJ91w', 
+        external: true
+      }
     ]
   },
   {
     category: 'Educational Materials',
     icon: Download,
     items: [
-      { title: 'Classroom Curriculum Package', type: 'ZIP' },
-      { title: 'Workshop Facilitation Guide', type: 'PDF' },
-      { title: 'Presentation Templates', type: 'PPTX' }
+      { title: 'Design for Agency Curriculum Package', type: 'ZIP' },
+      { title: 'Workshop Facilitation Material', type: 'PDF', href: 'public/resources/design_for_agency_workshop.pdf' }
     ]
   }
 ]
@@ -57,17 +65,40 @@ export function ResourceGrid() {
               </div>
               
               <ul className="space-y-4">
-                {resource.items.map((item, i) => (
+                {resource.items.map((item, i) => {
+                  const ActionIcon = resource.category === 'Case Studies' ? Play : Download
+
+                  return (
                   <li key={i} className="flex items-center justify-between gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
                     <div>
                       <div className="font-medium">{item.title}</div>
                       <div className="text-sm text-muted-foreground">{item.type}</div>
                     </div>
-                    <Button variant="ghost" size="sm">
-                      <Download className="w-4 h-4" />
-                    </Button>
+                    {item.href ? (
+                      <Button asChild variant="ghost" size="sm">
+                        {item.external ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${item.title}`}
+                          >
+                            <ActionIcon className="w-4 h-4" />
+                          </a>
+                        ) : (
+                          <a href={item.href} download aria-label={`Download ${item.title}`}>
+                            <ActionIcon className="w-4 h-4" />
+                          </a>
+                        )}
+                      </Button>
+                    ) : (
+                      <Button variant="ghost" size="sm" aria-label={`Download ${item.title}`} disabled>
+                        <ActionIcon className="w-4 h-4" />
+                      </Button>
+                    )}
                   </li>
-                ))}
+                  )
+                })}
               </ul>
             </Card>
           )

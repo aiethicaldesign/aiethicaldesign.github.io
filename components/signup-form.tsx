@@ -1,26 +1,6 @@
-'use client'
-
-import { useState } from 'react'
 import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 
 export function SignupForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    role: '',
-    interests: ''
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Handle form submission
-  }
-
   return (
     <section className="max-w-3xl mx-auto">
       <Card className="p-8 md:p-12">
@@ -33,76 +13,20 @@ export function SignupForm() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="name">{'Name *'}</Label>
-              <Input
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="border-2"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="email">{'Email *'}</Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="border-2"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="organization">{'Organization'}</Label>
-            <Input
-              id="organization"
-              value={formData.organization}
-              onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-              className="border-2"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="role">{'Your Role *'}</Label>
-            <select
-              id="role"
-              value={formData.role}
-              onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-              required
-              className="w-full p-3 rounded-md border-2 border-input bg-background"
-            >
-              <option value="">{'Select your role...'}</option>
-              <option value="academic">{'Academic/Researcher'}</option>
-              <option value="industry">{'Industry Practitioner'}</option>
-              <option value="policy">{'Policy Maker/Regulator'}</option>
-              <option value="educator">{'Educator'}</option>
-              <option value="other">{'Other'}</option>
-            </select>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="interests">{'Areas of Interest'}</Label>
-            <textarea
-              id="interests"
-              value={formData.interests}
-              onChange={(e) => setFormData({ ...formData, interests: e.target.value })}
-              rows={4}
-              className="w-full p-3 rounded-md border-2 border-input bg-background"
-              placeholder="Tell us what you're interested in..."
-            />
-          </div>
-
-          <Button type="submit" size="lg" className="w-full text-lg py-6">
-            {'Submit'}
-          </Button>
-        </form>
+        <div className="w-full overflow-hidden rounded-lg border-2 border-input bg-background">
+          <iframe
+            title="Sign Up to Get Involved"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=G96VzPWXk0-0uv5ouFLPke7IRsYPG-tFi0SNgHRsZ8lURVlYR1lTSzMzUDVXSVdMU1NCMEQ5MUFNWC4u&embed=true"
+            width="640px"
+            height="480px"
+            className="w-full h-[480px]"
+            frameBorder="0"
+            marginWidth={0}
+            marginHeight={0}
+            style={{ border: 'none', maxWidth: '100%', maxHeight: '100vh' }}
+            allowFullScreen
+          />
+        </div>
       </Card>
     </section>
   )
