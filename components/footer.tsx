@@ -23,10 +23,11 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">{'Research'}</h4>
+            <h4 className="font-semibold mb-4">{'Resources'}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-secondary">{'Design Principles'}</a></li>
-              <li><a href="#" className="hover:text-secondary">{'Case Studies'}</a></li>
+              <li><Link href="/resources#design-principles" className="hover:text-secondary">{'Design Principles'}</Link></li>
+              <li><Link href="/resources#case-studies" className="hover:text-secondary">{'Case Studies'}</Link></li>
+              <li><Link href="/resources#educational-materials" className="hover:text-secondary">{'Educational Materials'}</Link></li>
               <li><a href="https://oxfordccai.org/publication/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">{'Full Publication List'}</a></li>
             </ul>
           </div>

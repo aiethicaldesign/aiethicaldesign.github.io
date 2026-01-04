@@ -12,6 +12,7 @@ type ResourceItem = {
 
 type ResourceSection = {
   category: string
+  id: string
   icon: LucideIcon
   items: ResourceItem[]
 }
@@ -19,6 +20,7 @@ type ResourceSection = {
 const resources: ResourceSection[] = [
   {
     category: 'Design Principles',
+    id: 'design-principles',
     icon: BookOpen,
     items: [
       { title: 'AI Ethics Principles for Children', type: 'Image', href: '/resources/ai_ethics_principles_for_children.webp' },
@@ -27,6 +29,7 @@ const resources: ResourceSection[] = [
   },
   {
     category: 'Research Publications',
+    id: 'research-publications',
     icon: FileText,
     items: [
       { title: 'Challenges and Opportunities in Translating Ethical AI Principles into Practice for Children', type: 'Paper', href: '/resources/wang2024challenges.pdf'},
@@ -37,6 +40,7 @@ const resources: ResourceSection[] = [
   },
   {
     category: 'Case Studies',
+    id: 'case-studies',
     icon: Video,
     items: [
       {
@@ -54,6 +58,7 @@ const resources: ResourceSection[] = [
   },
   {
     category: 'Educational Materials',
+    id: 'educational-materials',
     icon: Download,
     items: [
       { title: 'Design for Agency Curriculum Package', type: 'ZIP' },
@@ -66,10 +71,10 @@ export function ResourceGrid() {
   return (
     <section className="mb-20">
       <div className="grid md:grid-cols-2 gap-8">
-        {resources.map((resource, index) => {
+        {resources.map((resource) => {
           const Icon = resource.icon
           return (
-            <Card key={index} className="p-8">
+            <Card key={resource.id} id={resource.id} className="p-8 scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Icon className="w-5 h-5 text-primary" />
