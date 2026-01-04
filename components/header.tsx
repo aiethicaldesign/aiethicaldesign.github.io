@@ -38,9 +38,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild size="lg" className="ml-4">
-              <Link href="/get-involved">{'Join Us'}</Link>
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -68,9 +65,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild size="lg" className="w-full mt-4">
-              <Link href="/get-involved">{'Join Us'}</Link>
-            </Button>
           </nav>
         )}
       </div>

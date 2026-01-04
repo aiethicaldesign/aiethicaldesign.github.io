@@ -27,7 +27,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-secondary">{'Design Principles'}</a></li>
               <li><a href="#" className="hover:text-secondary">{'Case Studies'}</a></li>
-              <li><a href="https://oxfordccai.org/publication/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">{'Publications'}</a></li>
+              <li><a href="https://oxfordccai.org/publication/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">{'Full Publication List'}</a></li>
             </ul>
           </div>
           
