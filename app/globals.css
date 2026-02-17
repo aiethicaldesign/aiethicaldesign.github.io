@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@theme inline {
+  /* Maintain the existing color palette from aiethicaldesign.org */
+  --color-mint: 197 229 220; /* #C5E5DC - main background */
+  --color-teal: 19 77 67; /* #134D43 - dark teal text */
+  --color-teal-light: 104 172 158; /* lighter teal for accents */
+  --color-white: 255 255 255;
+  --color-cream: 250 249 246; /* soft alternative bg */
+  
+  --color-background: var(--color-mint);
+  --color-foreground: var(--color-teal);
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-teal);
+  --color-primary: var(--color-teal);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-teal-light);
+  --color-secondary-foreground: var(--color-teal);
+  --color-muted: var(--color-cream);
+  --color-muted-foreground: var(--color-teal);
+  --color-accent: var(--color-teal-light);
+  --color-accent-foreground: var(--color-teal);
+  --color-border: var(--color-teal);
+  --color-input: var(--color-teal);
+  --color-ring: var(--color-teal);
+  
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: rgb(var(--color-border) / 0.2);
+}
+
+body {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
