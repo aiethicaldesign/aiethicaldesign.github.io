@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -25,11 +24,6 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="/get-involved">
-                  {'Get Involved'} <ArrowRight className="ml-2" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6">
                 <Link href="/resources">{'Explore Resources'}</Link>
               </Button>
             </div>

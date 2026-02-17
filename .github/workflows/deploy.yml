@@ -2,7 +2,7 @@ name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
-    branches: ["dev"]      # ⭐ auto deploy when push to dev branch
+    branches: ["main"]      # ⭐ auto deploy when push to main branch
   workflow_dispatch:       # ⭐ also allow for manual dispatch
 
 permissions:
