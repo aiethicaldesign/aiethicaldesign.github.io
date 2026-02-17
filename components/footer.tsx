@@ -17,7 +17,6 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{'Quick Links'}</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="hover:text-secondary">{'Home'}</Link></li>
-              <li><Link href="/get-involved" className="hover:text-secondary">{'Get Involved'}</Link></li>
               <li><Link href="/resources" className="hover:text-secondary">{'Resources'}</Link></li>
             </ul>
           </div>
@@ -36,13 +35,8 @@ export function Footer() {
             <h4 className="font-semibold mb-4">{'Partners'}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://5rightsfoundation.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
-                  {'5Rights Foundation'} <ExternalLink size={14} />
-                </a>
-              </li>
-              <li>
-                <a href="https://education.lego.com/en-gb/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
-                  {'LEGO Education'} <ExternalLink size={14} />
+                <a href="https://www.lego.com/en-gb/aboutus/lego-group?locale=en-gb" target="_blank" rel="noopener noreferrer" className="hover:text-secondary flex items-center gap-1">
+                  {'LEGO Group'} <ExternalLink size={14} />
                 </a>
               </li>
               <li>
