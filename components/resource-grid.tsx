@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, BookOpen, Video, Download, Play } from 'lucide-react'
+import { FileText, BookOpen, Video, Download, Play, ExternalLink } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 type ResourceItem = {
@@ -62,7 +62,7 @@ const resources: ResourceSection[] = [
     icon: Download,
     items: [
       { title: 'Design for Agency Curriculum Package', type: 'ZIP' },
-      { title: 'Workshop Facilitation Material', type: 'PDF', href: '/resources/design_for_agency_workshop.pdf' }
+      { title: 'Workshop Facilitation Material', type: 'GitHub Repo & Figma', href: 'https://github.com/junszhao/ethical-design', external: true }
     ]
   }
 ]
@@ -84,7 +84,7 @@ export function ResourceGrid() {
               
               <ul className="space-y-4">
                 {resource.items.map((item, i) => {
-                  const ActionIcon = resource.category === 'Case Studies' ? Play : Download
+                  const ActionIcon = resource.category === 'Case Studies' ? Play : item.external ? ExternalLink : Download
 
                   return (
                   <li key={i} className="flex items-center justify-between gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
