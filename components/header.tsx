@@ -10,6 +10,7 @@ export function Header() {
 
   const navItems = [
     { href: '/', label: 'Home' },
+    { href: '/news', label: 'News' },
     { href: '/resources', label: 'Resources' },
     { href: 'https://oxfordccai.org/', label: 'About OxfordCCAI', external: true }
   ]
