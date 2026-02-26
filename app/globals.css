@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme inline {
   /* Maintain the existing color palette from aiethicaldesign.org */
