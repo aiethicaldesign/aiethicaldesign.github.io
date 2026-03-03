@@ -24,7 +24,7 @@ const resources: ResourceSection[] = [
     icon: BookOpen,
     items: [
       { title: 'AI Ethics Principles for Children', type: 'Image', href: '/resources/ai_ethics_principles_for_children.webp' },
-      { title: 'Framework for Designing Children\'s Digital Autonomy', type: 'Image', href: '/resources/framework_12_ways_to_empower_children_digital_autonomy_design.pdf' }
+      { title: 'Framework for Designing Children\'s Agency', type: 'File', href: 'https://github.com/junszhao/ethical-design/blob/main/docs/',external: true }
     ]
   },
   {
@@ -66,8 +66,8 @@ const resources: ResourceSection[] = [
     id: 'educational-materials',
     icon: Download,
     items: [
-      { title: 'Design for Agency Curriculum Package', type: 'ZIP' },
-      { title: 'Workshop Facilitation Material', type: 'GitHub Repo & Figma', href: 'https://github.com/junszhao/ethical-design', external: true }
+      { title: 'Design for Agency Curriculum Package', type: 'GitHub Repo & Figma', href: 'https://github.com/junszhao/ethical-design', external: true },
+      { title: 'Workshop Facilitation Material', type: 'GitHub Repo & Figma', href: 'https://github.com/junszhao/ethical-design/tree/main/workshop_material', external: true }
     ]
   }
 ]
@@ -89,7 +89,7 @@ export function ResourceGrid() {
               
               <ul className="space-y-4">
                 {resource.items.map((item, i) => {
-                  const ActionIcon = resource.category === 'Case Studies' ? Play : item.external ? ExternalLink : Download
+                  const ActionIcon = resource.category === 'Case Studies' ? FileText : item.external ? ExternalLink : Download
 
                   return (
                   <li key={i} className="flex items-center justify-between gap-4 p-3 rounded-lg hover:bg-muted transition-colors">
