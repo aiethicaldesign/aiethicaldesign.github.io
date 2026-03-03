@@ -27,7 +27,7 @@ export function CHAIIntro() {
           <div className="grid grid-cols-1 gap-6">
             <div className="bg-muted p-6 rounded-xl">
               <img
-                src="/four_types_of_agency.PNG"
+                src="/four_types_of_agency.png"
                 alt="The agency conceptualisation"
                 className="w-full h-full object-cover"
               />
