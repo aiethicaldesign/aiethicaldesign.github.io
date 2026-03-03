@@ -41,17 +41,22 @@ const resources: ResourceSection[] = [
   {
     category: 'Case Studies',
     id: 'case-studies',
-    icon: Video,
+    icon: FileText,
     items: [
       {
-        title: 'Treat Me as Your Friend, Not A Number in Your Database',
-        type: 'Video',
-        href: 'https://www.youtube.com/watch?v=FYbh7luZ9rU',
+        title: 'A child-centred AI ecosystem to transform early year education',
+        type: 'GitHub Repo & Figma',
+        href: 'https://github.com/junszhao/ethical-design/tree/main/case_studies/case%20study%200',
         external: true
       },
-      { title: 'CHAITok', 
-        type: 'Video', 
-        href: 'https://www.youtube.com/watch?v=vkroMQxJ91w', 
+      { title: 'A child-centred system to support children with special education needs', 
+        type: 'GitHub Repo & Figma', 
+        href: 'https://github.com/junszhao/ethical-design/tree/main/case_studies/case%20study%201', 
+        external: true
+      },
+      { title: 'A child-centred system to help parents support children\'s social emotion learning', 
+        type: 'GitHub Repo & Figma', 
+        href: 'https://github.com/junszhao/ethical-design/tree/main/case_studies/case%20study%202', 
         external: true
       }
     ]
